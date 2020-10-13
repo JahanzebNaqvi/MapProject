@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Header from "./Components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import mapboxgl from "mapbox-gl";
-debugger;
 const { REACT_APP_MAPBOX_CODE } = process.env;
 mapboxgl.accessToken = REACT_APP_MAPBOX_CODE;
 
@@ -50,7 +49,7 @@ class App extends Component {
   }
   render() {
     return (
-      <Container className="App" fluid>
+      <div className="App">
         <Header></Header>
         <Row>
           <Col
@@ -58,7 +57,7 @@ class App extends Component {
             className="mapContainer"
           />
         </Row>
-      </Container>
+      </div>
     );
   }
 }

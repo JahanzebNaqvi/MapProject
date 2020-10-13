@@ -1,27 +1,25 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 function Header() {
   let classTab = "activeTab Tab";
   return (
-    <Container fluid>
-      <Row>
-        <Col>
-          <Row>
-            <Col md="4" className="Tab">
-              logout
-            </Col>
-          </Row>
-        </Col>
-        <Col>
-          <Row>
-            <Col className="Tab">QUEUED</Col>
-            <Col className={classTab}>SCHEDULED</Col>
-            <Col className="Tab">IN PROGRESS</Col>
-            <Col className="Tab">COMPLETED</Col>
-          </Row>
-        </Col>
-      </Row>
-    </Container>
+    <Row className="header">
+      <Col md="6" lg="6">
+        <Row>
+          <Col md="4" className="Tab">
+            logout
+          </Col>
+        </Row>
+      </Col>
+      <Col md="6" lg="6">
+        <Row>
+          <Col className="Tab">QUEUED</Col>
+          <Col className={classTab}>SCHEDULED</Col>
+          <Col className="Tab">IN PROGRESS</Col>
+          <Col className="Tab">COMPLETED</Col>
+        </Row>
+      </Col>
+    </Row>
   );
 }
 
