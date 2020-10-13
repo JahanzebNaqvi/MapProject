@@ -7,7 +7,9 @@ function Header() {
       <Row>
         <Col>
           <Row>
-            <Col md="4">logout</Col>
+            <Col md="4" className="Tab">
+              logout
+            </Col>
           </Row>
         </Col>
         <Col>
