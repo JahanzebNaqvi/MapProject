@@ -24,7 +24,6 @@
 .header {
   background-color: #ffffff;
   z-index: 1;
-  position: absolute;
   width: 100%;
 }
 .Tab {
@@ -35,15 +34,31 @@
   padding: 15px;
 }
 .activeTab {
-  background-color: #00bf2c;
+  background-color: #00bf2c !important;
   color: white;
 }
 .mapContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  height: 800px;
+}
+.right_content {
+  position: relative;
+}
+.left_content {
+  background-color: #ffffff;
+  z-index: 1;
+  position: relative;
+}
+.content_Tab {
+  font-weight: 700;
+  /* border: #000000 thick 10px !important; */
+  box-shadow: 2px 2px 2px grey;
+  cursor: pointer;
+  padding: 12px;
+  background-color: #f2f2f2;
+  margin: 1px;
+}
+.tabShadow {
+  box-shadow: 1px 1px 1px grey;
 }
 @keyframes App-logo-spin {
   from {

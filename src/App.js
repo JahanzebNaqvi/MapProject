@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Header from "./Components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -48,16 +48,24 @@ class App extends Component {
     await this.getCurrentLocation();
   }
   render() {
+    let classTab = "activeTab content_Tab tabShadow";
     return (
-      <div className="App">
+      <Container className="App" fluid>
         <Header></Header>
         <Row>
+          <Col className="left_content">
+            <Row>
+              <Col className="content_Tab tabShadow">Details</Col>
+              <Col className={classTab}>TimeLine</Col>
+              <Col className="content_Tab tabShadow">Agent Notes</Col>
+            </Row>
+          </Col>
           <Col
             ref={(el) => (this.mapContainer = el)}
-            className="mapContainer"
+            className="right_content mapContainer"
           />
         </Row>
-      </div>
+      </Container>
     );
   }
 }

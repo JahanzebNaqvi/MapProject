@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 function Header() {
-  let classTab = "activeTab Tab";
+  let classTab = "activeTab Tab tabShadow";
   return (
     <Row className="header">
       <Col md="6" lg="6">
@@ -13,10 +13,10 @@ function Header() {
       </Col>
       <Col md="6" lg="6">
         <Row>
-          <Col className="Tab">QUEUED</Col>
+          <Col className="Tab tabShadow">QUEUED</Col>
           <Col className={classTab}>SCHEDULED</Col>
-          <Col className="Tab">IN PROGRESS</Col>
-          <Col className="Tab">COMPLETED</Col>
+          <Col className="Tab tabShadow">IN PROGRESS</Col>
+          <Col className="Tab tabShadow">COMPLETED</Col>
         </Row>
       </Col>
     </Row>
