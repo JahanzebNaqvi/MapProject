@@ -43,6 +43,13 @@ class App extends Component {
       longitude,
       zoom,
     });
+    map.on("move", () => {
+      this.setState({
+        lng: map.getCenter().lng.toFixed(4),
+        lat: map.getCenter().lat.toFixed(4),
+        zoom: map.getZoom().toFixed(2),
+      });
+    });
   };
   async componentDidMount() {
     await this.getCurrentLocation();
@@ -60,10 +67,19 @@ class App extends Component {
               <Col className="content_Tab tabShadow">Agent Notes</Col>
             </Row>
           </Col>
-          <Col
-            ref={(el) => (this.mapContainer = el)}
-            className="right_content mapContainer"
-          />
+          <Col>
+            <Row
+              ref={(el) => (this.mapContainer = el)}
+              className="right_content mapContainer"
+            >
+              <div className="sidebarStyle">
+                <div>
+                  Longitude: {this.state.lng} | Latitude: {this.state.lat} |
+                  Zoom: {this.state.zoom}
+                </div>
+              </div>
+            </Row>
+          </Col>
         </Row>
       </Container>
     );
